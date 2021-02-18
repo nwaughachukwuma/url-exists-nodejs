@@ -1,0 +1,64 @@
+{
+  "name": "url-exists-nodejs",
+  "version": "0.0.1",
+  "description": "A node.js library to check if a url exists (with zero dependencies)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint --fix index.js",
+    "prettify": "yarn lint && prettier --write index.js"
+  },
+  "keywords": [
+    "isUrlExist",
+    "url",
+    "exists",
+    "node.js",
+    "https"
+  ],
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": "nwaughachukwuma",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "eslint": "7.20.0",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "jest-simple-summary": "^1.0.2",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {},
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["index.js"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 80,
+        "lines": 100,
+        "statements": 94.5
+      }
+    },
+    "reporters": [
+      "default"
+    ]
+  }
+}
