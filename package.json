@@ -8,6 +8,10 @@
     "lint": "eslint --fix index.js",
     "prettify": "yarn lint && prettier --write index.js"
   },
+  "repository": {
+    "url": "https://github.com/nwaughachukwuma/url-exists-nodejs",
+    "directory": "https://github.com/nwaughachukwuma"
+  },
   "keywords": [
     "isUrlExist",
     "url",
@@ -48,7 +52,9 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["index.js"],
+    "collectCoverageFrom": [
+      "index.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
