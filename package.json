@@ -39,11 +39,9 @@
   "dependencies": {},
   "lint-staged": {
     "index.js": [
-      "yarn test"
-    ],
-    "*.{js,ts}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "yarn test"
     ]
   },
   "husky": {
