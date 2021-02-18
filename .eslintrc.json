@@ -1,0 +1,42 @@
+{
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "parser": "@typescript-eslint/parser",
+      "sourceType": "module",
+      "extraFileExtensions": [],
+      "tsconfigRootDir": "./"
+    },
+    "plugins": [],
+    "ignorePatterns": [
+      "node_modules/"
+    ],
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "off",
+      "prefer-const": "off",
+      "prefer-spread": "warn"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  }
+  
