@@ -1,4 +1,4 @@
-import https from 'http'
+import http from 'http'
 
 async function urlExistNodeJS(url) {
 	if (typeof url !== 'string') {
@@ -18,7 +18,7 @@ async function urlExistNodeJS(url) {
 	}
 
 	return await new Promise((res, _) => {
-		const req = https.request(opt, (r) =>
+		const req = http.request(opt, (r) =>
 			res(/4\d\d/.test(`${r.statusCode}`) === false),
 		)
 
