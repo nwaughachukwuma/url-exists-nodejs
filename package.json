@@ -1,10 +1,11 @@
 {
   "name": "url-exists-nodejs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A node.js library to check if a url exists (with zero dependencies)",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test1": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "yarn jest",
     "lint": "eslint --fix index.js",
     "prettify": "yarn lint && prettier --write index.js"
   },
@@ -19,7 +20,6 @@
     "node.js",
     "https"
   ],
-  "type": "module",
   "exports": "./index.js",
   "files": [
     "index.js",
@@ -59,7 +59,7 @@
         "branches": 100,
         "functions": 80,
         "lines": 100,
-        "statements": 94.5
+        "statements": 95
       }
     },
     "reporters": [

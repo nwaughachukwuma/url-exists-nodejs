@@ -1,4 +1,4 @@
-import http from 'http'
+const http = require('http')
 
 async function urlExistNodeJS(url) {
 	if (typeof url !== 'string') {
@@ -42,4 +42,6 @@ function isURL(url) {
 	}
 }
 
-export default urlExistNodeJS
+// export default urlExistNodeJS
+
+module.exports = urlExistNodeJS

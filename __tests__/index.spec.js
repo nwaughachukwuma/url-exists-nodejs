@@ -1,7 +1,7 @@
 /**
  * Basic tests
  */
-import urlExistNodeJS from '../index'
+const urlExistNodeJS = require('../index')
 
 describe('Check if a URL exists', () => {
     describe('Check wrong input parameter', () => {
