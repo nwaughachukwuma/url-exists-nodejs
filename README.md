@@ -12,10 +12,10 @@ npm install url-exists-nodejs
 yarn add url-exists-nodejs
 ```
 
-
 ```js
 import isUrlExists from 'url-exists-nodejs'
 ```
+
 ## API
 
 ```ts
@@ -30,6 +30,5 @@ await isUrlExists('https://google.com') // => true
 // a well typed url that can't be found
 await isUrlExists('https://httpbin.org/status/404') // => false
 
-// an invalid url string
 await isUrlExists('not-a-valid-url') // => false
 ```
