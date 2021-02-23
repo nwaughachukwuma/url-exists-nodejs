@@ -42,6 +42,4 @@ function isURL(url) {
 	}
 }
 
-// export default urlExistNodeJS
-
 module.exports = urlExistNodeJS
