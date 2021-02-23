@@ -13,7 +13,6 @@ async function urlExistNodeJS(url) {
 	const opt = {
 		method: 'HEAD',
 		host: host,
-		port: 80,
 		path: pathname,
 	}
 
