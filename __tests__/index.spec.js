@@ -49,4 +49,12 @@ describe('Check if a URL exists', () => {
             expect(exists).toEqual(false);
         })
     })
+
+    describe('Can deep check a redirect url', () => {
+        it('Should return true for a redirect url', async () => {
+            const exists = await urlExistNodeJS('https://goo.gl/DrBmYG')
+
+            expect(exists).toEqual(true);
+        });
+    })
 })
