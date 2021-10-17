@@ -1,5 +1,5 @@
-const test = require('ava')
-const urlExistNodeJS = require('./index')
+import test from 'ava';
+import urlExistNodeJS from './index.js';
 
 /**
  * Basic tests to check if a URL exists
