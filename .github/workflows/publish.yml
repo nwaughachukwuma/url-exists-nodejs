@@ -1,0 +1,35 @@
+name: Publish package to npm
+on:
+  - push
+jobs:
+  publish:
+    name: test on Node.js ${{ matrix.node-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version:
+          - 16
+          - 14
+          - 12
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v2
+        id: cache-deps
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ matrix.node-version }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+      - run: yarn lint
+      - run: yarn test
+
+      - if: matrix.node-version == 14
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
