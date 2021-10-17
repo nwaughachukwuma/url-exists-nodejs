@@ -6,8 +6,7 @@
   "scripts": {
     "test1": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test": "yarn jest",
-    "lint": "eslint --fix index.js",
-    "prettify": "yarn lint && prettier --write index.js"
+    "lint": "eslint --fix index.js"
   },
   "repository": {
     "url": "https://github.com/nwaughachukwuma/url-exists-nodejs",
@@ -41,7 +40,7 @@
     "index.js": [
       "eslint --fix",
       "prettier --write",
-      "yarn test"
+      "yarn test --collectCoverage=false"
     ]
   },
   "husky": {
