@@ -1,6 +1,6 @@
-const http = require('http')
+import http from 'http'
 
-async function urlExistNodeJS(url) {
+export async function urlExistNodeJS(url) {
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof url}`)
 	}
@@ -41,4 +41,4 @@ function isURL(url) {
 	}
 }
 
-module.exports = urlExistNodeJS
+export default urlExistNodeJS
