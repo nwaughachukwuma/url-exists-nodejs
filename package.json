@@ -4,7 +4,7 @@
   "description": "A node.js library to check if a url exists (with zero dependencies)",
   "main": "index.js",
   "scripts": {
-    "test": "yarn jest",
+    "test": "ava && yarn jest",
     "lint": "eslint --fix index.js"
   },
   "repository": {
@@ -29,6 +29,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "ava": "^3.15.0",
     "eslint": "7.20.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-prettier": "3.3.1",
@@ -49,5 +50,10 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+	"ava": {
+    "files": [
+			"test.js"
+		]
   }
 }
