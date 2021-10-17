@@ -1,9 +1,9 @@
 {
   "name": "url-exists-nodejs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A node.js library to check if a url exists (with zero dependencies)",
 	"type": "module",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "tsd && ava",
     "lint": "eslint --fix index.js"
@@ -20,9 +20,10 @@
   ],
   "exports": "./index.js",
   "files": [
-    "index.js",
-    "index.d.ts"
+    "./index.js",
+    "./index.d.ts"
   ],
+	"sideEffects": false,
   "author": {
     "name": "Chukwuma Nwaugha",
     "email": "nwaughac@gmail.com",
