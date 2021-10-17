@@ -5,11 +5,10 @@ export async function urlExistNodeJS(url) {
 		throw new TypeError(`Expected a string, got ${typeof url}`)
 	}
 
-	if (!isURL(url)) {
-		return false
-	}
+	const valid_url = validURL(url)
+	if (!valid_url) return false
 
-	const { host, pathname } = new URL(url)
+	const { host, pathname } = valid_url
 	const opt = {
 		method: 'HEAD',
 		host: host,
@@ -26,18 +25,12 @@ export async function urlExistNodeJS(url) {
 	})
 }
 
-// cut from https://github.com/sindresorhus/is-url-superb/blob/main/index.js
-function isURL(url) {
-	url = url.trim()
-	if (url.includes(' ')) {
-		return false
-	}
-
+// inspired by https://github.com/sindresorhus/is-url-superb/blob/main/index.js
+function validURL(url) {
 	try {
-		new URL(url) // eslint-disable-line no-new
-		return true
+		return new URL(url.trim()) // eslint-disable-line no-new
 	} catch (_e) {
-		return false
+		return null
 	}
 }
 

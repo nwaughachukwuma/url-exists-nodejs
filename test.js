@@ -1,9 +1,8 @@
-import test from 'ava';
-import urlExistNodeJS from './index.js';
-
 /**
  * Basic tests to check if a URL exists
  */
+import test from 'ava';
+import urlExistNodeJS from './index.js';
 
 // Check wrong input parameter
 test('Should throw TypeError for a non string', async (t) => {
