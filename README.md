@@ -31,4 +31,7 @@ await isUrlExists('https://google.com') // => true
 await isUrlExists('https://httpbin.org/status/404') // => false
 
 await isUrlExists('not-a-valid-url') // => false
+
+// can deep check a redirect url
+await isUrlExists('https://bit.ly/300awAn') // => true
 ```
