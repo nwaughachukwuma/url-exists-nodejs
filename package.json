@@ -1,6 +1,6 @@
 {
   "name": "url-exists-nodejs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A node.js library to check if a url exists (with zero dependencies)",
 	"type": "module",
   "main": "index.js",
