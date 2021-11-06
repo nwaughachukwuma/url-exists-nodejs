@@ -15,12 +15,12 @@ export async function urlExistNodeJS(url) {
 		path: pathname,
 	}
 
-	return await new Promise((res, _) => {
+	return await new Promise((resolve) => {
 		const req = http.request(opt, (r) =>
-			res(/4\d\d/.test(`${r.statusCode}`) === false),
+			resolve(/4\d\d/.test(`${r.statusCode}`) === false),
 		)
 
-		req.on('error', () => res(false))
+		req.on('error', () => resolve(false))
 		req.end()
 	})
 }
