@@ -16,7 +16,7 @@
     "isUrlExist",
 		"url-exists",
     "is-url",
-    "is-exists"
+		"valid-url"
   ],
   "exports": "./index.js",
   "files": [
@@ -26,8 +26,7 @@
 	"sideEffects": false,
   "author": {
     "name": "Chukwuma Nwaugha",
-    "email": "nwaughac@gmail.com",
-    "url": "https://nwaughachukwuma.github.io/portfolio"
+    "email": "nwaughac@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {
