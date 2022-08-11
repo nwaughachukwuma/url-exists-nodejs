@@ -9,13 +9,9 @@ export async function urlExistNodeJS(url) {
 	if (!valid_url) return false
 
 	const { host, pathname } = valid_url
-	const opt = {
-		method: 'HEAD',
-		host: host,
-		path: pathname,
-	}
+	const opt = { method: 'HEAD', host, path: pathname }
 
-	return await new Promise((resolve) => {
+	return new Promise((resolve) => {
 		const req = http.request(opt, (r) =>
 			resolve(/4\d\d/.test(`${r.statusCode}`) === false),
 		)
@@ -25,7 +21,6 @@ export async function urlExistNodeJS(url) {
 	})
 }
 
-// inspired by https://github.com/sindresorhus/is-url-superb/blob/main/index.js
 function validURL(url) {
 	try {
 		return new URL(url.trim()) // eslint-disable-line no-new
