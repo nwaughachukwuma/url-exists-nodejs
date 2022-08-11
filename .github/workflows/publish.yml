@@ -26,8 +26,12 @@ jobs:
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install
-      - run: yarn lint
-      - run: yarn test
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: lint
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: test
 
       - if: matrix.node-version == 14
         uses: JS-DevTools/npm-publish@v1
