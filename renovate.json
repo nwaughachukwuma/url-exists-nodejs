@@ -1,0 +1,14 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"enabled": true,
+	"ignoreDeps": [],
+	"packageRules": [
+	  {
+		"updateTypes": ["minor", "patch", "pin", "digest"],
+		"automerge": true,
+		"automergeType": "branch"
+	  }
+	],
+	"extends": ["group:monorepos"],
+	"schedule": ["every sunday"]
+  }
